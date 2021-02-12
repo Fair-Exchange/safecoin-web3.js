@@ -8,7 +8,7 @@ import {
   Connection,
   Account,
   sendAndConfirmTransaction,
-  LAMPORTS_PER_SOL,
+  LAMPORTS_PER_SAFE,
   Transaction,
   Secp256k1Program,
 } from '../src';
@@ -37,7 +37,7 @@ if (process.env.TEST_LIVE) {
 
       const from = new Account();
       await connection.confirmTransaction(
-        await connection.requestAirdrop(from.publicKey, 2 * LAMPORTS_PER_SOL),
+        await connection.requestAirdrop(from.publicKey, 2 * LAMPORTS_PER_SAFE),
         'singleGossip',
       );
 
@@ -62,7 +62,7 @@ if (process.env.TEST_LIVE) {
 
       const from = new Account();
       await connection.confirmTransaction(
-        await connection.requestAirdrop(from.publicKey, 2 * LAMPORTS_PER_SOL),
+        await connection.requestAirdrop(from.publicKey, 2 * LAMPORTS_PER_SAFE),
         'singleGossip',
       );
 

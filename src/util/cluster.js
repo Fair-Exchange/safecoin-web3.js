@@ -5,14 +5,14 @@
  */
 const endpoint = {
   http: {
-    devnet: 'http://devnet.solana.com',
-    testnet: 'http://testnet.solana.com',
-    'mainnet-beta': 'http://api.mainnet-beta.solana.com',
+    devnet: 'http://localhost',
+    testnet: 'http://localhost',
+    'mainnet-beta': 'localhost',
   },
   https: {
-    devnet: 'https://devnet.solana.com',
-    testnet: 'https://testnet.solana.com',
-    'mainnet-beta': 'https://api.mainnet-beta.solana.com',
+    devnet: 'localhost',
+    testnet: 'localhost',
+    'mainnet-beta': 'localhost',
   },
 };
 
