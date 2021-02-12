@@ -1,5 +1,5 @@
 {
-  "name": "@solana/web3.js",
+  "name": "@safecoin/web3.js",
   "version": "0.0.0-development",
   "description": "Safecoin Javascript API",
   "keywords": [
@@ -7,7 +7,7 @@
     "blockchain"
   ],
   "license": "MIT",
-  "author": "Safecoin Maintainers <maintainers@solana.com>",
+  "author": "Safecoin Maintainers <maintainers@safecoin.com>",
   "homepage": "https://solana.com/",
   "repository": {
     "type": "git",
@@ -112,7 +112,7 @@
     "@rollup/plugin-multi-entry": "^4.0.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
     "@rollup/plugin-replace": "^2.3.4",
-    "@solana/spl-token": "^0.0.13",
+    "@safecoin/spl-token": "^0.0.13",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "babel-eslint": "^11.0.0-beta.2",

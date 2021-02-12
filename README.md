@@ -13,10 +13,10 @@
 [codecov-image]: https://codecov.io/gh/solana-labs/solana-web3.js/branch/master/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/solana-labs/solana-web3.js
 [esdoc-image]: https://solana-labs.github.io/solana-web3.js/badge.svg
-[npm-image]: https://img.shields.io/npm/v/@solana/web3.js.svg?style=flat
-[npm-downloads-image]: https://img.shields.io/npm/dm/@solana/web3.js.svg?style=flat
+[npm-image]: https://img.shields.io/npm/v/@safecoin/web3.js.svg?style=flat
+[npm-downloads-image]: https://img.shields.io/npm/dm/@safecoin/web3.js.svg?style=flat
 [esdoc-url]: https://solana-labs.github.io/solana-web3.js/
-[npm-url]: https://www.npmjs.com/package/@solana/web3.js
+[npm-url]: https://www.npmjs.com/package/@safecoin/web3.js
 [semantic-release-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
 [code-style-prettier-image]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
@@ -33,12 +33,12 @@ This is the Safecoin Javascript API built on the Safecoin [JSON RPC API](https:/
 
 ### Yarn
 ```
-$ yarn add @solana/web3.js
+$ yarn add @safecoin/web3.js
 ```
 
 ### npm
 ```
-$ npm install --save @solana/web3.js
+$ npm install --save @safecoin/web3.js
 ```
 
 ### Browser bundle
@@ -56,13 +56,13 @@ To build and run tests:
 
 ### Javascript
 ```js
-const solanaWeb3 = require('@solana/web3.js');
+const solanaWeb3 = require('@safecoin/web3.js');
 console.log(solanaWeb3);
 ```
 
 ### ES6
 ```js
-import solanaWeb3 from '@solana/web3.js';
+import solanaWeb3 from '@safecoin/web3.js';
 console.log(solanaWeb3);
 ```
 
@@ -80,7 +80,7 @@ Add the following line under the [libs] section of your project's .flowconfig to
 activate it:
 ```ini
 [libs]
-node_modules/@solana/web3.js/module.flow.js
+node_modules/@safecoin/web3.js/module.flow.js
 ```
 
 ## Examples
@@ -93,7 +93,7 @@ Standalone examples:
 
 ## Releases
 Releases are available on [Github](https://github.com/solana-labs/solana-web3.js/releases)
-and [npmjs.com](https://www.npmjs.com/package/@solana/web3.js)
+and [npmjs.com](https://www.npmjs.com/package/@safecoin/web3.js)
 
 Each Github release features a tarball containing API documentation and a
 minified version of the module suitable for direct use in a browser environment

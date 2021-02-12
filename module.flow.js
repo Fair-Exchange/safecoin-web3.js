@@ -1,12 +1,12 @@
 /**
- * Flow Library definition for @solana/web3.js
+ * Flow Library definition for @safecoin/web3.js
  *
  * This file is manually maintained
  *
  * Usage: add the following line under the [libs] section of your project's
  * .flowconfig:
  * [libs]
- * node_modules/@solana/web3.js/module.flow.js
+ * node_modules/@safecoin/web3.js/module.flow.js
  *
  */
 
@@ -14,7 +14,7 @@ import {Buffer} from 'buffer';
 import * as BufferLayout from 'buffer-layout';
 import {PublicKey} from './src/publickey';
 
-declare module '@solana/web3.js' {
+declare module '@safecoin/web3.js' {
   // === src/publickey.js ===
   declare export var MAX_SEED_LENGTH: number;
   declare export type PublicKeyNonce = [PublicKey, number];
