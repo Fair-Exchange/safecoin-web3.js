@@ -5,14 +5,14 @@
  */
 const endpoint = {
   http: {
-    devnet: 'http://localhost',
-    testnet: 'http://localhost',
-    'mainnet-beta': 'localhost',
+    devnet: 'http://devnet.safecoin.org',
+    testnet: 'http://testnet.safecoin.org',
+    'mainnet-beta': 'http://api.mainnet-beta.safecoin.org',
   },
   https: {
-    devnet: 'localhost',
-    testnet: 'localhost',
-    'mainnet-beta': 'localhost',
+    devnet: 'https://devnet.safecoin.org',
+    testnet: 'https://testnet.safecoin.org',
+    'mainnet-beta': 'https://api.mainnet-beta.safecoin.org',
   },
 };
 
