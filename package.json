@@ -7,14 +7,14 @@
     "blockchain"
   ],
   "license": "MIT",
-  "author": "Safecoin Maintainers <maintainers@safecoin.com>",
-  "homepage": "https://solana.com/",
+  "author": "Safecoin Maintainers <safe@safecoin.org>",
+  "homepage": "https://safecoin.org/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solana-labs/solana-web3.js.git"
+    "url": "git+https://github.com/Fair-Exchange/safecoin-web3.js.git"
   },
   "bugs": {
-    "url": "http://github.com/solana-labs/solana-web3.js.git/issues"
+    "url": "git+https://github.com/Fair-Exchange/safecoin-web3.js.git/issues"
   },
   "publishConfig": {
     "access": "public"
