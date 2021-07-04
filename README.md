@@ -1,6 +1,5 @@
 [![Build status][travis-image]][travis-url]
 [![codecov][codecov-image]][codecov-url]
-[![esdoc][esdoc-image]][esdoc-url]
 <br>
 [![npm][npm-image]][npm-url]
 [![npm-downloads][npm-downloads-image]][npm-url]
@@ -8,14 +7,12 @@
 [![semantic-release][semantic-release-image]][semantic-release-url]
 [![code-style-prettier][code-style-prettier-image]][code-style-prettier-url]
 
-[travis-image]: https://api.travis-ci.org/solana-labs/solana-web3.js.svg?branch=master
-[travis-url]: https://travis-ci.org/solana-labs/solana-web3.js
-[codecov-image]: https://codecov.io/gh/solana-labs/solana-web3.js/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/solana-labs/solana-web3.js
-[esdoc-image]: https://solana-labs.github.io/solana-web3.js/badge.svg
+[travis-image]: https://api.travis-ci.org/Fair-Exchange/safecoin-web3.js.svg?branch=master
+[travis-url]: https://travis-ci.org/Fair-Exchange/safecoin-web3.js
+[codecov-image]: https://codecov.io/gh/Fair-Exchange/safecoin-web3.js/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/Fair-Exchange/safecoin-web3.js
 [npm-image]: https://img.shields.io/npm/v/@safecoin/web3.js.svg?style=flat
 [npm-downloads-image]: https://img.shields.io/npm/dm/@safecoin/web3.js.svg?style=flat
-[esdoc-url]: https://solana-labs.github.io/solana-web3.js/
 [npm-url]: https://www.npmjs.com/package/@safecoin/web3.js
 [semantic-release-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
@@ -24,9 +21,9 @@
 
 # Safecoin JavaScript API
 
-This is the Safecoin Javascript API built on the Safecoin [JSON RPC API](https://docs.solana.com/apps/jsonrpc-api)
+This is the Safecoin Javascript API built on the Safecoin [JSON RPC API](https://docs.safecoin.org/apps/jsonrpc-api)
 
-[Latest API Documentation](https://solana-labs.github.io/solana-web3.js/)
+[Latest API Documentation](https://Fair-Exchange.github.io/safecoin-web3.js/)
 
 
 ## Installation
@@ -43,14 +40,24 @@ $ npm install --save @safecoin/web3.js
 
 ### Browser bundle
 ```html
-<script src="https://github.com/solana-labs/solana-web3.js/releases/download/v0.0.6/solanaWeb3.min.js"></script>
+<!-- Development (un-minified) -->
+<script src="https://unpkg.com/@safecoin/web3.js@latest/lib/index.iife.js"></script>
+
+<!-- Production (un-minified) -->
+<script src="https://unpkg.com/@safecoin/web3.js@latest/lib/index.iife.min.js"></script>
 ```
 
+## Development Environment Setup
 
-### Development Environment Setup
-To build and run tests:
-1. Install Rust from https://rustup.rs/
-2. Install the latest Safecoin release from https://docs.solana.com/cli/install-solana-cli-tools
+Install the latest Safecoin release from https://docs.safecoin.org/cli/install-solana-cli-tools
+
+### Run test validator
+
+**Use `solana-test-validator` from the latest Safecoin release**
+
+### BPF program development
+
+**Use `cargo build-bpf` from the latest Safecoin release**
 
 ## Usage
 
@@ -62,7 +69,7 @@ console.log(solanaWeb3);
 
 ### ES6
 ```js
-import solanaWeb3 from '@safecoin/web3.js';
+import * as solanaWeb3 from '@safecoin/web3.js';
 console.log(solanaWeb3);
 ```
 
@@ -75,69 +82,18 @@ console.log(solanaWeb3);
 ## Flow
 
 A [Flow library definition](https://flow.org/en/docs/libdefs/) is provided at
-[module.flow.js](https://github.com/solana-labs/solana-web3.js/tree/master/module.flow.js).
-Add the following line under the [libs] section of your project's .flowconfig to
+https://unpkg.com/@safecoin/web3.js@latest/module.flow.js.
+Download the file and add the following line under the [libs] section of your project's `.flowconfig` to
 activate it:
 ```ini
 [libs]
 node_modules/@safecoin/web3.js/module.flow.js
 ```
 
-## Examples
-See the [examples/](https://github.com/solana-labs/solana-web3.js/tree/master/examples) directory for small snippets.
-
-Standalone examples:
-* Message feed (BPF Rust and C): https://github.com/solana-labs/example-messagefeed
-* Tic-tac-toe (BPF C): https://github.com/solana-labs/example-tictactoe
-* Web wallet: https://github.com/solana-labs/example-webwallet
-
 ## Releases
-Releases are available on [Github](https://github.com/solana-labs/solana-web3.js/releases)
+Releases are available on [Github](https://github.com/Fair-Exchange/safecoin-web3.js/releases)
 and [npmjs.com](https://www.npmjs.com/package/@safecoin/web3.js)
 
 Each Github release features a tarball containing API documentation and a
 minified version of the module suitable for direct use in a browser environment
-(&lt;script&gt; tag)
-
-## Deprecated
-
-### Local Network
-
-**Please use `solana-test-validator` from the latest Safecoin release instead of the information in this section**
-
-The `solana-localnet` program is provided to easily start a test Safecoin cluster
-locally on your machine.  Docker must be installed.  The JSON RPC endpoint of
-the local cluster is `http://localhost:8328`.
-
-To start, first fetch the latest Docker image by running:
-```bash
-$ npx solana-localnet update
-```
-
-Then run the following command to start the cluster
-```bash
-$ npx solana-localnet up
-```
-
-While the cluster is running logs are available with:
-```bash
-$ npx solana-localnet logs -f
-```
-
-Stop the cluster with:
-```bash
-$ npx solana-localnet down
-```
-
-### BPF program development
-
-**Please use `cargo build-bpf` from the latest Safecoin release instead of the information in this section**
-
-The Safecoin BPF SDK is located in the `bpf-sdk/` subdirectory if you installed
-solana-web3.js from npmjs.com.
-
-From a git clone, run `npm run bpf-sdk:install` to fetch the latest BPF SDK.
-
-Additionally Rust must be installed to build Rust BPF programs such as
-`examples/bpf-rust-noop/`.  See https://www.rust-lang.org/install.html for
-installation details.
+(`<script>` tag)
